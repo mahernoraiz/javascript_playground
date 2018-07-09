@@ -1,4 +1,4 @@
-//lecture 6 variables 
+//lecture 6 variables
 /*var name = 'noraiz';
 console.log(name);
 
@@ -12,15 +12,9 @@ var fullAge = true;
 console.log(fullAge);
 */
 
-
-
-
-
-
-
 ////////////////////////////////////////////////
 ////////////////////////////////////////////////
-//lecture 7 variables 2 
+//lecture 7 variables 2
 
 //var name = 'noraiz';
 //var age  = 25;
@@ -47,21 +41,9 @@ console.log(name + ' is ' + age + '  year old ' );
 var lastName = prompt('what is you name');
 console.log(lastName);*/
 
-
-
-
-
-
 ////////////////////////////////////////////////
 ////////////////////////////////////////////////
 //lecture * operators
-
-
-
-
-
-
-
 
 /*var now = 2016;
 var birthYear = 25;
@@ -79,20 +61,9 @@ ageJamal++;
 console.log(ageJamal);
 console.log(ageShariq);*/
 
-
-
-
-
-
-
 ////////////////////////////////////////////////
 ////////////////////////////////////////////////
 //lecture 9 if else statement
-
-
-
-
-
 
 /*var name = 'jamal';
 var age = 25;
@@ -105,17 +76,6 @@ else{
     console.log(name + ' hopefully married soon');
 }
 */
-
-
-
-
-
-
-
-
-
-
-
 
 ////////////////////////////////////////////////
 ////////////////////////////////////////////////
@@ -155,18 +115,15 @@ console.log('shariq is ' + age + ' and he is ' + job );
 
 */
 
-
-
-
 ////////////////////////////////////////////////
 ////////////////////////////////////////////////
 //lecture 11 Test
 
-var noraizAge = 25;
-var noraizHeight = 6;
+/*var noraizAge = prompt ('player1 enter ');
+var noraizHeight =prompt('player1 enter height');
 
-var shariqAge = 30;
-var shariqHeight= 5;
+var shariqAge = prompt('player2 enter');
+var shariqHeight= prompt('player2 enter height');
 
 var noraizTotal = ( 5 * noraizAge ) + noraizHeight;
 var shariqTotal =( 5 * shariqAge ) + shariqHeight;
@@ -179,15 +136,94 @@ if (noraizTotal>shariqTotal) {
 else{
     console.log('Draw');
 } 
+*/
 
+////////////////////////////////////////////////
+////////////////////////////////////////////////
+//lecture 11 FUNCTION
 
+/*function calculateAge(YearOfBirth) {
+  var age = 2018 - YearOfBirth;
+  return age;
+}
+var xulfiAge = calculateAge(1990);
+console.log(xulfiAge);
+function yearUntilRetirment(name, year) {
+  var age = calculateAge(year);
+  var retirment = 65 - age;
 
+  if (retirment >= 0) {
+    console.log(name + "is retired in " + retirment + " years");
+  } else {
+    console.log(name + "is already retired");
+  }
+}
+yearUntilRetirment("noraiz", 1990);
+yearUntilRetirment("noraiz", 2000);
+yearUntilRetirment("noraiz", 1947);
 
+*/
 
+////////////////////////////////////////////////
+////////////////////////////////////////////////
+//lecture 15 ARRAY
 
+/*var names = ["noraiz", "Jamal", "Shariq"];
+var ages = [1991, 1992, 1997];
 
+console.log(ages);
+names[2] = "rehan";
+names[3] = "shariq";
+names.push("xulfi");
 
+names.unshift('abc');
+console.log(names);
+*/
 
+////////////////////////////////////////////////
+////////////////////////////////////////////////
+//lecture 16 OBJECTS
+/*
+var noraiz ={
+    firstName : 'noraiz',
+    lastName : 'mumtaz',
+    dateOfBirth : 1991,
+    job : 'teacher',
+    isMarried : false
+};
+console.log(noraiz.dateOfBirth);
+console.log(noraiz['dateOfBirth']);
 
+var abc = 'job';
+console.log(noraiz[abc]);
+*/
 
+////////////////////////////////////////////////
+////////////////////////////////////////////////
+//lecture 16 OBJECTS
 
+var noraiz = {
+  firstName: "noraiz",
+  lastName: "mumtaz",
+  dateOfBirth: 1990,
+  job: "teacher",
+  isMarried: false,
+  family: ["xulfi", "jamal", "shariq", "rehan"],
+
+  //calculateAge: function(dateOfBirth)                   function making 1
+  // {
+  // return 2018 - dateOfBirth;
+  //}
+  calculateAge: function() {
+    //function making 2
+    return 2018 - this.dateOfBirth;
+  }
+};
+//console.log(noraiz.calculateAge(noraiz.dateOfBirth));   function calling 1
+console.log(noraiz.calculateAge()); // funtion calling 2
+
+// adding element in object noraiz
+var age = noraiz.calculateAge();   
+noraiz.age = age;
+noraiz.
+console.log(noraiz);
