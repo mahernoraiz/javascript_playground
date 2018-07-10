@@ -200,9 +200,9 @@ console.log(noraiz[abc]);
 
 ////////////////////////////////////////////////
 ////////////////////////////////////////////////
-//lecture 16 OBJECTS
+//lecture 17 OBJECTS
 
-var noraiz = {
+/*var noraiz = {
   firstName: "noraiz",
   lastName: "mumtaz",
   dateOfBirth: 1990,
@@ -210,20 +210,135 @@ var noraiz = {
   isMarried: false,
   family: ["xulfi", "jamal", "shariq", "rehan"],
 
-  //calculateAge: function(dateOfBirth)                   function making 1
+  //calculateAge: function(dateOfBirth)                   Expression making 1
   // {
   // return 2018 - dateOfBirth;
   //}
+  //Expression making 2
   calculateAge: function() {
-    //function making 2
+    
     return 2018 - this.dateOfBirth;
   }
 };
-//console.log(noraiz.calculateAge(noraiz.dateOfBirth));   function calling 1
-console.log(noraiz.calculateAge()); // funtion calling 2
+//console.log(noraiz.calculateAge(noraiz.dateOfBirth));   Expression calling 1
+console.log(noraiz.calculateAge()); // EXpression calling 2
 
 // adding element in object noraiz
-var age = noraiz.calculateAge();   
+var age = noraiz.calculateAge();
 noraiz.age = age;
-noraiz.
+
 console.log(noraiz);
+*/
+/*
+var jamal = {
+  name: "jamal",
+  job: "developer",
+  dateOfBirth: 1991,
+  calculateAge: function() {
+    return 2018 - this.dateOfBirth;
+  }
+};
+console.log(jamal.calculateAge());
+var age = jamal.calculateAge();
+jamal.age = age;
+console.log(jamal);
+*/
+
+////////////////////////////////////////////////
+////////////////////////////////////////////////
+//lecture 17 loops
+/*
+for (var i = 0; i < 10; i++) {
+  console.log(i);
+}*/
+// Assending loop
+/* var names = ['noraiz','jamal','xulfi','shariq','rehan','abcs','def'];
+for (var i = 0; i < names.length; i++) {
+        console.log(names[i]);
+    
+}
+*/
+//Dessnding loop
+/*var names = [
+  "noraiz",
+  "jamal",
+  "xulfi",
+  "shariq",
+  "rehan",
+  "abcs",
+  "def",
+  "gef"
+];
+for (var i = names.length - 1; i >= 0; i--) {
+  console.log(names[i]);
+}
+*/
+
+// while loop
+
+/*var names = [
+    "noraiz",
+    "jamal",
+    "xulfi",
+    "shariq",
+    "rehan",
+    "abcs",
+    "def",
+    "gef"
+  ];
+var i = 0;
+while (i<names.length) {
+    console.log(names[i]);
+    i++;
+}*/
+
+// break and continue in loops
+
+// break consition
+/*for (var i = 0; i < 10; i++) {
+  console.log(i);
+  if (i === 8) {
+    break;
+  }
+}
+
+// continue condition
+
+for (var i = 0; i < 10; i++){
+    if (i === 5) {
+        console.log(i+" noraiz");
+        continue;
+        
+    }
+    console.log(i);
+}
+*/
+
+////////////////////////////////////////////////
+////////////////////////////////////////////////
+//lecture 17 loops
+// Array for person where born
+
+function printFullAge(years) {
+  var ages = [];
+  var fullAges = [];
+  for (var i = 0; i < years.length; i++) {
+    ages[i] = 2018 - years[i];
+  }
+  for (i = 0; i < ages.length; i++) {
+    if (ages[i] >= 18) {
+      console.log("person "+(i+1)+ " is " + ages[i] + " years old , and is of full age.");
+      fullAges.push(true);
+    } else {
+      console.log("person "+(i+1)+ " is " + ages[i] + " years old , and is not of full age.");
+      fullAges.push(false);
+    }
+  }
+  return fullAges;
+}
+var years = [1960, 1970, 1980, 1990, 2010];
+var full_1 = printFullAge(years);
+//svar full_2 =printFullAge([2012,2014,1990,1980]);
+
+
+
