@@ -43,7 +43,7 @@ console.log(lastName);*/
 
 ////////////////////////////////////////////////
 ////////////////////////////////////////////////
-//lecture * operators
+//lecture 8 * operators
 
 /*var now = 2016;
 var birthYear = 25;
@@ -319,7 +319,7 @@ for (var i = 0; i < 10; i++){
 //lecture 17 loops
 // Array for person where born
 
-function printFullAge(years) {
+/*function printFullAge(years) {
   var ages = [];
   var fullAges = [];
   for (var i = 0; i < years.length; i++) {
@@ -338,7 +338,101 @@ function printFullAge(years) {
 }
 var years = [1960, 1970, 1980, 1990, 2010];
 var full_1 = printFullAge(years);
-//svar full_2 =printFullAge([2012,2014,1990,1980]);
+//svar full_2 =printFullAge([2012,2014,1990,1980]);*/
 
+////////////////////////////////////////////////
+////////////////////////////////////////////////
+//lecture 24
+/*
+var name = 'noraiz';
+function first(){
+  var a = 'Hello';
+  second();
+  var x = a +  name;
 
+}
+function second(){
+  var b = 'Hello';
+  third();
+  var z = b +  name;
 
+}
+function third(){
+  var c = 'Hello';
+  var y = c +  name;
+}
+first();
+console.log(first(c));
+
+*/
+
+////////////////////////////////////////////////
+////////////////////////////////////////////////
+//lecture 26 hosting
+// hosting work for FUnction declaration
+
+//functions
+/*calculateAge(1956);
+function calculateAge(year) {
+  console.log(2018 - year);
+}*/
+//calculateAge(1990); // this is hosting
+
+// hosting is only work on function stattment not on function expression
+// this is nor working because hosting is not working on function expression
+/*retirment(1960);
+var retirment = function(year){
+  console.log(65 - (2018 -  year));
+
+}*/
+// this is working because this is not hosting
+/*var retirment = function(year) {
+  console.log(65 - (2018 - year));
+};
+retirment(1960);
+*/
+
+// variables
+/*
+//this is normal way
+var age = 25;
+console.log(age);
+
+//this is the way of hosting
+console.log(age1);
+var age1 = 65;
+*/
+
+/*console.log(age); 
+var age = 25;
+
+ 
+function abc(){
+  console.log(age);
+
+  var age = 65;
+  console.log(age);
+}
+abc();
+console.log(age);
+*/
+
+////////////////////////////////////////////////
+////////////////////////////////////////////////
+//lecture 27 scope
+
+var a = "hello,";
+first();
+function first() {
+  var b = "hi,";
+  second();
+
+  function second() {
+    var c = "hey,";
+    third();
+    function third() {
+      var d = "noraiz";
+      console.log(a + b + c + d);
+    }
+  }
+}
